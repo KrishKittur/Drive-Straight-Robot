@@ -11,6 +11,6 @@ public class RobotContainer {
 
 
   public void getAutonomousCommand() {
-    // Add auto command here
+    // Add the auto command here
   }
 }
