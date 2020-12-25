@@ -17,15 +17,15 @@ public class DriveSubsystem extends SubsystemBase {
     private final AnalogGyro positionGyro = new AnalogGyro(DRIVE_GYRO_CHANNEL);
 
     // Method to set the drive by percent
-    public void setDriveBP(int percent) {
-        leftMotor.set(percent);
-        rightMotor.set(percent);
+    public void setDriveBP(double leftPercent, double rightPercent) {
+        leftMotor.set(leftPercent);
+        rightMotor.set(rightPercent);
     }
 
     // Method to set the drive by voltage
-    public void setDriveBV(int voltage) {
-        leftMotor.set(voltage);
-        rightMotor.set(voltage);
+    public void setDriveBV(double leftVoltage, double rightVoltage) {
+        leftMotor.set(leftVoltage);
+        rightMotor.set(rightVoltage);
     }
 
     // Method to read the gyros angle
