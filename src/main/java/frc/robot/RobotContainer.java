@@ -4,7 +4,7 @@ import static frc.robot.Constants.Controller.*;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-import frc.robot.commands.drive.DriveStraightCommand;
+import frc.robot.commands.drive.DriveDistanceCommand;
 import frc.robot.subsystems.DriveSubsystem;
 
 public class RobotContainer {
@@ -20,8 +20,8 @@ public class RobotContainer {
 
   // Function to configure the button bindings
   private void configureButtonBindings() {
-    new JoystickButton(main_controller, Button.kA.value).whenHeld(
-      new DriveStraightCommand(drive_subsystem)
+    new JoystickButton(main_controller, Button.kA.value).whenPressed(
+      new DriveDistanceCommand(drive_subsystem, 3)
     );
   }
 
